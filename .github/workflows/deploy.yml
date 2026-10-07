@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Copiar a Nginx
-        run: sudo cp index.html /var/www/html/index.html
+        run: sudo -n cp index.html /var/www/html/index.html
 
       - name: Reiniciar Nginx
-        run: sudo systemctl restart nginx
+        run: sudo -n systemctl restart nginx
